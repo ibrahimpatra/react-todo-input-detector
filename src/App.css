@@ -1,38 +1,103 @@
-.App {
+.app {
   text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-input {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.todo-input input,
+.todo-input textarea {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.todo-input textarea {
+  resize: vertical;
+}
+
+.todo-input button {
+  background-color: #4caf50;
   color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-input button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+
+.todo-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.todo-actions {
+  position: absolute;
+  top: 5px;
+  display: flex;
+}
+
+.todo-actions button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.todo-actions-edit {
+  background-color: #f4f136;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.todo-actions button:hover {
+  background-color: #d32f2f;
+}
+
+[dir="rtl"] .todo-actions {
+  right: 5px;
+}
+
+[dir="ltr"] .todo-actions {
+  left: 5px;
+}
+
+.todo-description {
+  margin-top: 5px;
+  font-size: 14px;
 }
